@@ -1,0 +1,25 @@
+<button mat-raised-button color="primary" (click)="init()">打开相机</button>
+<div *ngIf="isCameraOpen" [@openComponent] class="camera-interface">
+  <div class="camera-container">
+    <div class="camera-header">
+      <i class="material-icons back-button" matRipple (click)="ngOnDestroy()">arrow_back</i>
+    </div>
+    <video #camera autoplay="autoplay" style="width: 100%;height: 100%"></video>
+    <div class="camera-buttons">
+      <button mat-fab (click)="takePhoto()" color="default">
+        <mat-icon aria-label="Take Photo">photo_camera</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="photo-container" [ngClass]="{'display-photo': !isTakingPhoto}">
+    <canvas #cameraCanvas width="640" height="480"></canvas>
+    <div class="camera-buttons">
+      <button mat-fab (click)="check()" color="default" [disabled]="isConverting">
+        <mat-icon aria-label="Take Photo">check</mat-icon>
+      </button>
+      <button mat-fab (click)="cancel()" color="default" [disabled]="isConverting">
+        <mat-icon aria-label="Take Photo">clear</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

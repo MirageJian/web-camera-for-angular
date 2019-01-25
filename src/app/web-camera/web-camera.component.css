@@ -1,0 +1,57 @@
+.camera-interface {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 30;
+  height: 100%;
+  width: 100%;
+}
+.camera-container, .photo-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 30;
+  height: 100%;
+  width: 100%;
+  background: black;
+}
+.photo-container {
+  z-index: 31;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.camera-buttons, .camera-header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 32;
+}
+.camera-header{
+  top: 0;
+  height: 64px;
+  justify-content: flex-start;
+}
+.camera-buttons button {
+  margin: 0 16px;
+}
+.display-photo {
+  display: flex;
+}
+.back-button {
+  cursor: pointer;
+  float: left;
+  padding: 0;
+  color: white;
+  margin: 24px;
+}
