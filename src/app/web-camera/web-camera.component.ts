@@ -35,11 +35,12 @@ export class WebCameraComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // this.init();
   }
-
+  // 初始化
   init() {
     this.isCameraOpen = true;
     const constraints = {
       video: true,
+      facingMode: { exact: 'environment' }
       // audio: true
     };
     navigator.mediaDevices.getUserMedia(constraints).then((mediaStream) => {
@@ -48,7 +49,7 @@ export class WebCameraComponent implements OnInit, OnDestroy {
       this.camera.nativeElement.play().then();
     });
   }
-
+  // 拍照
   takePhoto() {
     this.isTakingPhoto = false;
     // 设定画布大小
@@ -75,7 +76,7 @@ export class WebCameraComponent implements OnInit, OnDestroy {
     this.cameraCanvas.nativeElement.getContext('2d')
       .drawImage(this.camera.nativeElement, 0, 0, settings.width, settings.height, posx, posy, x, y);
   }
-
+  // 保存
   check() {
     this.isConverting = true;
     this.cameraCanvas.nativeElement.toBlob((blob) => {
@@ -85,11 +86,11 @@ export class WebCameraComponent implements OnInit, OnDestroy {
     const dataURL = this.cameraCanvas.nativeElement.toDataURL('image/jpeg');
     this.photoCheckBase64.emit(dataURL);
   }
-
+  // 取消
   cancel() {
     this.isTakingPhoto = true;
   }
-
+  // 切换摄像头
   switchCameras() {
     const settings = this.videoTrack.getSettings();
     const constraints = {
