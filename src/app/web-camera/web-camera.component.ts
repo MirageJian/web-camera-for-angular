@@ -95,7 +95,9 @@ export class WebCameraComponent implements OnInit, OnDestroy {
     const constraints = {
       facingMode: settings.facingMode === 'user' ? 'environment' : 'user'
     };
-    this.videoTrack.applyConstraints(constraints);
+    console.log(settings, constraints);
+    console.log(this.videoTrack.getCapabilities());
+    this.videoTrack.applyConstraints(constraints).then();
   }
 
   ngOnDestroy(): void {

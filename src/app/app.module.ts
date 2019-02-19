@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {MatButtonModule, MatIconModule} from '@angular/material';
+import {MatRippleModule} from '@angular/material/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {WebCameraComponent} from './web-camera/web-camera.component';
 
@@ -16,7 +17,7 @@ import {WebCameraComponent} from './web-camera/web-camera.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

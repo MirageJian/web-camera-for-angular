@@ -9,16 +9,19 @@
       <button mat-fab (click)="takePhoto()" color="default">
         <mat-icon aria-label="Take Photo">photo_camera</mat-icon>
       </button>
+      <button mat-fab (click)="switchCameras()" color="default">
+        <mat-icon aria-label="Switch Camera">cached</mat-icon>
+      </button>
     </div>
   </div>
   <div class="photo-container" [ngClass]="{'display-photo': !isTakingPhoto}">
     <canvas #cameraCanvas width="640" height="480"></canvas>
     <div class="camera-buttons">
       <button mat-fab (click)="check()" color="default" [disabled]="isConverting">
-        <mat-icon aria-label="Take Photo">check</mat-icon>
+        <mat-icon aria-label="Ok">check</mat-icon>
       </button>
       <button mat-fab (click)="cancel()" color="default" [disabled]="isConverting">
-        <mat-icon aria-label="Take Photo">clear</mat-icon>
+        <mat-icon aria-label="No">clear</mat-icon>
       </button>
     </div>
   </div>
