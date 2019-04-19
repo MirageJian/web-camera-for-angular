@@ -1,0 +1,36 @@
+<h2>搜索测试</h2>
+<mat-form-field appearance="standard">
+  <mat-label>关键字</mat-label>
+  <input matInput placeholder="请输入关键字" #searchBox (input)="search(searchBox.value)">
+</mat-form-field>
+<p>关键字：{{searchBox.value}}</p>
+
+<!-- 这里是一个表格组件不需要弄懂 -->
+<ng-container *ngIf="searchResult">
+
+<table mat-table [dataSource]="searchResult" class="full-width">
+  <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Weight Color -->
+  <ng-container matColumnDef="color">
+    <th mat-header-cell *matHeaderCellDef> Color </th>
+    <td mat-cell *matCellDef="let element"> {{element.color}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</ng-container>

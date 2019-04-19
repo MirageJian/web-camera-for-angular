@@ -1,5 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h1>Open you camera!</h1>
-<app-web-camera (photoCheck)="blob=$event" (photoCheckBase64)="base64=$event"></app-web-camera>
-<h1>The below is you pic</h1>
-<img src="{{base64}}" alt="pic" style="width: 100%;">
+<h1>Welcome!</h1>
+<button mat-button routerLink="/camera-test">相机</button>
+<button mat-button routerLink="/form-test">表单</button>
+<button mat-button routerLink="/search-test">搜索</button>
+<router-outlet></router-outlet>
