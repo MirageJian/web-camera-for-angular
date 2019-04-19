@@ -26,6 +26,10 @@ export class SearchTestComponent implements OnInit {
     // new对象
     this.searchTerm = new Subject();
     // 添加管道，使用操作符对数据进行处理，最后订阅
+    // debounceTime延时500ms
+    // startWith从空开始进行搜索
+    // distinctUntilChanged检测是否更改
+    // switchMap切换Observable源到搜索接口
     this.searchResult = this.searchTerm.pipe(
       debounceTime(500),
       startWith(''),
