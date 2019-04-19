@@ -6,8 +6,6 @@ A angular camera implemented with html5, and has basic functions such as taking 
 必须允许权限后才能开启摄像头。  
 Must grant permission to use camera in html5.  
 
-The js version will be considered.
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
