@@ -1,7 +1,7 @@
 <h2>搜索测试</h2>
-<mat-form-field appearance="standard">
-  <mat-label>关键字</mat-label>
-  <input matInput placeholder="请输入关键字" #searchBox (input)="search(searchBox.value)">
+<mat-form-field appearance="outline" class="standard-width">
+  <mat-label>水果的名字</mat-label>
+  <input matInput placeholder="请输入水果的名字" #searchBox (input)="search(searchBox.value)">
 </mat-form-field>
 <p>关键字：{{searchBox.value}}</p>
 

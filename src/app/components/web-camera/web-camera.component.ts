@@ -40,7 +40,7 @@ export class WebCameraComponent implements OnInit, OnDestroy {
     this.isCameraOpen = true;
     const constraints = {
       video: true,
-      facingMode: { exact: 'environment' }
+      facingMode: 'environment'
       // audio: true
     };
     navigator.mediaDevices.getUserMedia(constraints).then((mediaStream) => {
@@ -105,7 +105,9 @@ export class WebCameraComponent implements OnInit, OnDestroy {
     this.isConverting = false;
     this.isCameraOpen = false;
     this.isTakingPhoto = true;
-    this.videoTrack.stop();
+    if (this.videoTrack) {
+      this.videoTrack.stop();
+    }
     if (this.camera !== undefined) {
       this.camera.nativeElement.srcObject = null;
     }

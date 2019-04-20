@@ -1,4 +1,4 @@
-# Angular相机组件WebCamera 
+# angular学习，各种组件集合
 
 ## 包含组件
 
@@ -9,9 +9,20 @@
 一个使用原生html5实现的angular相机demo。实现了基础的拍照，开关摄像机等简单功能。功能会慢慢补齐，例如切换前后摄像头，选择拍照大小，闪光灯等。  
 必须允许权限后才能开启摄像头。  
 
+### 一个使用cdk实现的可拖动编辑的动态表单FormTest
+
+### 通过angular投影实现的工具栏Toolbar
+
 ### 搜索及显示SearchTest
 
 简单实用搜索组件
+
+## 如何启动
+
+1.首先安装node.js  
+2.在项目根目录运行命令npm install  
+3.运行npm start  
+编译好后会自动打开浏览器
 
 ## Development server
 
