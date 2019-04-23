@@ -1,0 +1,104 @@
+/*二级工具条基本样式*/
+.sub-toolbar {
+  background-color: #37474f;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 64px;
+  padding: 0 32px;
+  font-size: 18px;
+  line-height: 20px;
+  color: #ffffff;
+  /* position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0; */
+  display: flex;
+  align-items: stretch;
+  z-index: 8;
+}
+
+.sub-toolbar .toolbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 280px;
+  width: 100%;
+}
+
+/*左右菜单的样式*/
+::ng-deep .toolbar-content > :first-child {
+  display: flex;
+  align-items: center;
+}
+
+::ng-deep .toolbar-content > :last-child {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/*返回键样式*/
+::ng-deep .arrow-back {
+  cursor: pointer;
+  padding: 20px;
+  margin: 0 0 0 -16px;
+  float: left;
+  background-color: transparent;
+}
+
+::ng-deep .arrow-back:before {
+  content: 'arrow_back';
+}
+/*搜索框样式*/
+.search-bar {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  margin-left: 280px;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  -webkit-transition: 0.25s;
+  transition: 0.25s; }
+.search-bar.open {
+  top: 0; }
+.search-bar .search-icon {
+  position: absolute;
+  top: 17px;
+  left: 14px; }
+.search-bar .search-icon .material-icons {
+  font-size: 32px;
+  color: #999; }
+.search-bar .close-search {
+  position: absolute;
+  cursor: pointer;
+  font-size: 30px;
+  top: 20px;
+  right: 18px; }
+.search-bar .close-search .material-icons {
+  color: #999 !important;
+  opacity: 1;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+.search-bar .close-search .material-icons:hover {
+  opacity: .5; }
+.search-bar input[type="text"] {
+  width: 100%;
+  font-size: 16px;
+  padding: 22px 60px 22px 56px;
+  border: none;
+  color: #212121;}
+/*手机样式*/
+@media (max-width: 1169px) {
+  .sub-toolbar .toolbar-content,.sub-toolbar .search-bar {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .sub-toolbar {
+    padding: 0 16px;
+    /*margin: -15px 0 16px 0;*/
+  }
+}

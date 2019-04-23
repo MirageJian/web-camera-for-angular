@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule, MatTableModule } from '@angular/material';
+import { MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule, MatTableModule, MatProgressSpinnerModule } from '@angular/material';
 import { MatRippleModule } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WebCameraComponent } from './components/web-camera/web-camera.component';
@@ -13,6 +13,7 @@ import { SearchTestComponent } from './pages/search-test/search-test.component';
 import { FormTestComponent } from './pages/form-test/form-test.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ToolbarComponent } from './pages/toolbar/toolbar.component';
+import { SubToolbarComponent } from './components/sub-toolbar/sub-toolbar.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ToolbarComponent } from './pages/toolbar/toolbar.component';
     SearchTestComponent,
     FormTestComponent,
     ToolbarComponent,
+    SubToolbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +37,7 @@ import { ToolbarComponent } from './pages/toolbar/toolbar.component';
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
+    MatProgressSpinnerModule,
   ],
   providers: [
     AppService

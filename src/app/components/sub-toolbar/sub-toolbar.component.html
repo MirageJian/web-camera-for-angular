@@ -1,0 +1,35 @@
+<div class="sub-toolbar">
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <!-- 前面的搜索按钮 -->
+    <div class="search-icon">
+      <mat-spinner diameter="26" color="accent" *ngIf="isSearching"></mat-spinner>
+      <i class="material-icons" *ngIf="!isSearching">search</i>
+    </div>
+    <!-- 后面的搜索框 -->
+    <input type="text" placeholder="{{searchTip}}..." #searchBox (keydown.enter)="enterSearch(searchBox.value)"
+           (input)="inputSearch(searchBox.value)">
+    <div class="close-search">
+      <i class="material-icons">close</i>
+    </div>
+  </div>
+  <div class="toolbar-content">
+    <!--<mat-progress-bar mode="indeterminate" style="position: absolute; top: 0;" *ngIf="false"></mat-progress-bar>-->
+    <!-- 投影 -->
+    <ng-content></ng-content>
+  </div>
+</div>
+<!--用法-->
+<!--
+<app-sub-toolbar searchTip="搜索值" [isSearching]="isTableLoading" (searchStart)="searchStart()">
+<h4> {{l('参数管理')}} <i class="fa fa-spin fa-spinner" *ngIf="isTableLoading"></i></h4>
+<div>
+  <button mat-icon-button color="default" appToolbarSearch>
+    <mat-icon aria-label="搜索" matTooltip="搜索值">search</mat-icon>
+  </button>
+  <button mat-icon-button color="default">
+    <mat-icon aria-label="刷新" matTooltip="刷新" (click)="refresh()">refresh</mat-icon>
+  </button>
+</div>
+</app-sub-toolbar>
+-->

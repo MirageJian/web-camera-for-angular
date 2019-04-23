@@ -1,3 +1,12 @@
-<p>
-  toolbar works!
-</p>
+<app-sub-toolbar [isSearching]="true">
+  <!-- 这里一定是两个HTML元素，这里的两个元素会自动向两边靠s -->
+  <h4>这里是测试工具栏</h4>
+  <div>
+    <button mat-icon-button color="default" appToolbarSearch>
+      <mat-icon aria-label="搜索" matTooltip="搜索值">search</mat-icon>
+    </button>
+    <button mat-icon-button color="default">
+      <mat-icon aria-label="刷新" matTooltip="刷新">refresh</mat-icon>
+    </button>
+  </div>
+</app-sub-toolbar>
