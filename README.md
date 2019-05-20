@@ -13,6 +13,10 @@
 
 ### 通过angular投影实现的工具栏Toolbar
 
+### quill富文本实现与js库引入
+
+本项目使用的是quilljs富文本编辑器，演示了如何将js库引入到angular项目
+
 ### 搜索及显示SearchTest
 
 简单实用搜索组件
