@@ -1,3 +1,23 @@
-<p>
-  form-test works!
-</p>
+<form (ngSubmit)="create(newFruit)">
+  <mat-checkbox name="isSuger" (change)="sugerChange()">是否是甜的</mat-checkbox>
+  <mat-form-field appearance="standard">
+    <mat-label>水果名字</mat-label>
+    <input matInput placeholder="请输入水果名字" type="text" name="name" [(ngModel)]="newFruit.name">
+    <mat-hint align="start">请准确得输入水果名</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <mat-label>颜色</mat-label>
+    <input matInput placeholder="请输入颜色" type="text" name="color" [(ngModel)]="newFruit.color">
+    <mat-hint align="start">请准确得输入颜色</mat-hint>
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <mat-label>编号</mat-label>
+    <input matInput placeholder="请输入编号" type="text" name="id" [(ngModel)]="newFruit.id">
+    <mat-hint align="start">请准确得编号</mat-hint>
+  </mat-form-field>
+  <button mat-raised-button type="submit">提交</button>
+</form>
+
+<div *ngFor="let item of allFruits" >
+  {{item.name}} {{item.color}} {{item.id}} {{item.isSuger}}
+</div>

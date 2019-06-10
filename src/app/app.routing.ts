@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SearchTestComponent } from './pages/search-test/search-test.component';
 import { ToolbarComponent } from './pages/toolbar/toolbar.component';
+import { RichTextComponent } from './pages/rich-text/rich-text.component';
 
 const routes: Routes = [
   // {path: '', component: AppComponent, children: [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'form-test', component: FormTestComponent },
   { path: 'search-test', component: SearchTestComponent },
   { path: 'toolbar', component: ToolbarComponent },
+  { path: 'rich-text', component: RichTextComponent },
   // { path: '**', component: PageNotFoundComponent },
 ];
 

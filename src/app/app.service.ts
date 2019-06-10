@@ -23,4 +23,8 @@ export class AppService {
       return furits.filter(f => f.name.indexOf(name) !== -1);
     }));
   }
+  // 创建新的水果
+  createNewFruit(fruit: Fruit) {
+    return this.http.put(this.fruits, fruit);
+  }
 }
