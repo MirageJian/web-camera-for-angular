@@ -1,3 +1,4 @@
+import { DataDirectiveComponent } from './pages/data-directive/data-directive.component';
 import { FormTestComponent } from './pages/form-test/form-test.component';
 import { CameraTestComponent } from './pages/camera-test/camera-test.component';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'search-test', component: SearchTestComponent },
   { path: 'toolbar', component: ToolbarComponent },
   { path: 'rich-text', component: RichTextComponent },
+  { path: 'data-directive', component: DataDirectiveComponent },
   // { path: '**', component: PageNotFoundComponent },
 ];
 

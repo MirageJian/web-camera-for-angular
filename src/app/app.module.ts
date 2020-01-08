@@ -1,6 +1,8 @@
+import { EasyDataDirective } from './shared/directives/easy-data.directive';
 import { AppService } from './app.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule, MatTableModule,
@@ -20,6 +22,7 @@ import { ToolbarComponent } from './pages/toolbar/toolbar.component';
 import { SubToolbarComponent } from './components/sub-toolbar/sub-toolbar.component';
 import { RichTextComponent } from './pages/rich-text/rich-text.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DataDirectiveComponent } from './pages/data-directive/data-directive.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ToolbarComponent,
     SubToolbarComponent,
     RichTextComponent,
+    DataDirectiveComponent,
+    EasyDataDirective
   ],
   imports: [
     BrowserModule,
@@ -38,6 +43,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    CommonModule,
     // Material组件导入
     AppRoutingModule,
     MatButtonModule,
