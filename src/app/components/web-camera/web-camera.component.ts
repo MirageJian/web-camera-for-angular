@@ -21,8 +21,8 @@ import {animate, style, transition, trigger} from '@angular/animations';
 export class WebCameraComponent implements OnInit, OnDestroy {
   @Output() photoCheck = new EventEmitter<any>();
   @Output() photoCheckBase64 = new EventEmitter<string>();
-  @ViewChild('camera') camera: ElementRef;
-  @ViewChild('cameraCanvas') cameraCanvas: ElementRef;
+  @ViewChild('camera', {static: true}) camera: ElementRef;
+  @ViewChild('cameraCanvas', {static: true}) cameraCanvas: ElementRef;
   // 相机是否打开
   isCameraOpen = false;
   // 是否为拍照界面
